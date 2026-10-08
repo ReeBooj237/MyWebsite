@@ -1,0 +1,104 @@
+<section class="about" id="about" aria-labelledby="about-title">
+  <div class="about-mark" aria-hidden="true">B</div>
+  <div>
+    <p class="eyebrow">A note from BOOja</p>
+    <h2 id="about-title">Art can be a bridge,<br />not a boundary.</h2>
+    <p>
+      BOOja is built around curiosity, respect, and shared appreciation. It is a place for
+      looking closely, listening carefully, and choosing to celebrate the people and ideas
+      behind the work we admire.
+    </p>
+    <p class="values">Respect · Curiosity · Celebration · Community</p>
+  </div>
+</section>
+
+<style>
+  .about {
+    display: grid;
+    grid-template-columns: 0.65fr 1.35fr;
+    gap: clamp(48px, 9vw, 140px);
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 130px 0;
+    border-top: 1px solid rgba(70, 41, 24, 0.2);
+  }
+
+  .about-mark {
+    display: grid;
+    width: min(100%, 330px);
+    aspect-ratio: 1;
+    place-items: center;
+    align-self: center;
+    border: 1px solid #9d6a34;
+    border-radius: 48% 52% 44% 56%;
+    color: #8b5e2b;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: clamp(7rem, 18vw, 14rem);
+    font-style: italic;
+    opacity: 0.86;
+    transform: rotate(-5deg);
+  }
+
+  .eyebrow {
+    margin: 0 0 24px;
+    color: #8b5e2b;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    color: #3a2416;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: clamp(2.8rem, 5vw, 5.5rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.98;
+  }
+
+  .about p:not(.eyebrow, .values) {
+    max-width: 650px;
+    color: #654c3a;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 1.08rem;
+    line-height: 1.78;
+  }
+
+  .about p:nth-of-type(2) {
+    margin-top: 32px;
+  }
+
+  .values {
+    margin: 34px 0 0;
+    color: #8b5e2b;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: 900px) {
+    .about {
+      grid-template-columns: 1fr;
+    }
+
+    .about-mark {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .about {
+      width: min(100% - 28px, 1180px);
+      padding: 90px 0;
+    }
+
+    .about-mark {
+      width: 190px;
+    }
+  }
+</style>

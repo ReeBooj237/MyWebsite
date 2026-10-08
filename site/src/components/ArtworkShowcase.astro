@@ -1,0 +1,232 @@
+<section class="section artwork-section" id="artwork" aria-labelledby="artwork-title">
+  <div class="section-heading">
+    <p class="eyebrow">Curated as a living archive</p>
+    <h2 id="artwork-title">Artwork that tells us<br />we are not alone.</h2>
+    <p>
+      A visual collection of the forms, colours, and stories that make communities feel
+      visible, celebrated, and connected.
+    </p>
+  </div>
+
+  <div class="art-grid">
+    <article class="art-card art-card-large">
+      <div class="artwork artwork-one" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="card-copy">
+        <p>01 / Cinema</p>
+        <h3>Worlds in motion</h3>
+        <p>Immersive scenes, visual language, and the art that lives beyond the frame.</p>
+      </div>
+    </article>
+
+    <article class="art-card">
+      <div class="artwork artwork-two" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="card-copy">
+        <p>02 / Television</p>
+        <h3>Stories made visible</h3>
+        <p>Designs and details that turn narrative into a shared experience.</p>
+      </div>
+    </article>
+
+    <article class="art-card">
+      <div class="artwork artwork-three" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="card-copy">
+        <p>03 / Gaming</p>
+        <h3>New worlds, new myths</h3>
+        <p>Creative traditions found in imagined places and interactive stories.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .section {
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 110px 0;
+  }
+
+  .artwork-section {
+    border-top: 1px solid rgba(70, 41, 24, 0.2);
+  }
+
+  .section-heading {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 54px;
+  }
+
+  .eyebrow {
+    margin: 0;
+    color: #8b5e2b;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    color: #3a2416;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 400;
+    letter-spacing: -0.045em;
+    line-height: 1;
+  }
+
+  .section-heading > p:last-child {
+    margin: 0;
+    color: #654c3a;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .art-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.875fr;
+    gap: 24px;
+  }
+
+  .art-card {
+    display: flex;
+    min-height: 470px;
+    flex-direction: column;
+    background: #f4eadb;
+    border: 1px solid rgba(90, 55, 29, 0.22);
+  }
+
+  .art-card-large {
+    grid-row: span 2;
+    min-height: 964px;
+  }
+
+  .artwork {
+    position: relative;
+    min-height: 310px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #7e4f2d, #c58b48 55%, #ead8b8);
+  }
+
+  .art-card-large .artwork {
+    min-height: 62%;
+  }
+
+  .artwork span {
+    position: absolute;
+    display: block;
+    border: 1px solid rgba(255, 244, 220, 0.7);
+    border-radius: 50%;
+  }
+
+  .artwork span:nth-child(1) {
+    inset: 10% 16%;
+    transform: rotate(20deg);
+  }
+
+  .artwork span:nth-child(2) {
+    top: 27%;
+    left: 32%;
+    width: 36%;
+    height: 46%;
+    border-color: rgba(255, 244, 220, 0.5);
+    transform: rotate(-18deg);
+  }
+
+  .artwork span:nth-child(3) {
+    right: 7%;
+    bottom: 10%;
+    width: 40%;
+    height: 25%;
+    border-radius: 50% 50% 12% 50%;
+  }
+
+  .artwork-two {
+    background: linear-gradient(135deg, #3e2517, #9d6a34 50%, #e0c3a0);
+  }
+
+  .artwork-two span:nth-child(1) {
+    inset: 12% 20%;
+    border-radius: 0;
+    transform: rotate(45deg);
+  }
+
+  .artwork-three {
+    background: linear-gradient(145deg, #c29b5b, #6d4426 65%, #2e1a12);
+  }
+
+  .artwork-three span:nth-child(1) {
+    inset: 20% 23%;
+    border-radius: 50% 10% 50% 10%;
+  }
+
+  .card-copy {
+    padding: 28px;
+  }
+
+  .card-copy p:first-child {
+    margin: 0 0 9px;
+    color: #8b5e2b;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .card-copy h3 {
+    margin: 0 0 10px;
+    color: #3a2416;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 1.65rem;
+    font-weight: 400;
+  }
+
+  .card-copy p:last-child {
+    margin: 0;
+    color: #654c3a;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 900px) {
+    .section-heading {
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    .art-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .art-card-large {
+      grid-row: auto;
+      min-height: 760px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .section {
+      width: min(100% - 28px, 1180px);
+      padding: 80px 0;
+    }
+
+    .art-card,
+    .art-card-large {
+      min-height: 0;
+    }
+
+    .art-card-large .artwork,
+    .artwork {
+      min-height: 270px;
+    }
+  }
+</style>

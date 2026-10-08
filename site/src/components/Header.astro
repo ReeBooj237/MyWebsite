@@ -1,0 +1,105 @@
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="BOOja home">
+    <span class="brand-mark" aria-hidden="true">B</span>
+    <span>BOOja</span>
+  </a>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <a href="#artwork">Artwork</a>
+    <a href="#fandoms">Fandoms</a>
+    <a href="#about">About</a>
+    <a href="#connect">Connect</a>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: min(1180px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(70, 41, 24, 0.25);
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #3d2618;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid #8b5e2b;
+    border-radius: 50% 50% 45% 55%;
+    color: #8b5e2b;
+    font-size: 1.1rem;
+    transform: rotate(-7deg);
+  }
+
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(18px, 3vw, 38px);
+  }
+
+  .site-nav a {
+    position: relative;
+    color: #4b3020;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+  }
+
+  .site-nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    left: 0;
+    height: 1px;
+    background: #9d6a34;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 180ms ease;
+  }
+
+  .site-nav a:hover::after,
+  .site-nav a:focus-visible::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  @media (max-width: 680px) {
+    .site-header {
+      align-items: flex-start;
+      gap: 18px;
+    }
+
+    .site-nav {
+      justify-content: flex-end;
+      gap: 14px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .site-header {
+      flex-direction: column;
+    }
+
+    .site-nav {
+      justify-content: flex-start;
+    }
+  }
+</style>

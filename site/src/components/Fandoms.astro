@@ -1,0 +1,138 @@
+<section class="section fandoms" id="fandoms" aria-labelledby="fandoms-title">
+  <div class="fandom-intro">
+    <p class="eyebrow">For the communities that dream with us</p>
+    <h2 id="fandoms-title">Fandoms are not just worlds.<br />They are homes.</h2>
+    <p>
+      BOOja welcomes cinema, television, gaming, and the rich visual cultures that make
+      those worlds memorable. Every community deserves thoughtful attention and genuine
+      respect.
+    </p>
+  </div>
+
+  <div class="fandom-list">
+    <article>
+      <span class="number">01</span>
+      <div>
+        <h3>Cinema</h3>
+        <p>Ideas, performances, and visual storytelling that shape how we see the world.</p>
+      </div>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </article>
+    <article>
+      <span class="number">02</span>
+      <div>
+        <h3>Television</h3>
+        <p>Characters, worlds, and details that invite us into a story across time.</p>
+      </div>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </article>
+    <article>
+      <span class="number">03</span>
+      <div>
+        <h3>Gaming</h3>
+        <p>Imagined worlds, visual design, and interactive stories built for shared play.</p>
+      </div>
+      <span class="arrow" aria-hidden="true">↗</span>
+    </article>
+  </div>
+</section>
+
+<style>
+  .fandoms {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(50px, 8vw, 120px);
+    border-top: 1px solid rgba(70, 41, 24, 0.2);
+  }
+
+  .eyebrow {
+    margin: 0 0 24px;
+    color: #8b5e2b;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    margin: 0;
+    color: #3a2416;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: clamp(2.7rem, 5vw, 5.3rem);
+    font-weight: 400;
+    letter-spacing: -0.05em;
+    line-height: 0.98;
+  }
+
+  .fandom-intro > p:last-child {
+    margin: 30px 0 0;
+    color: #654c3a;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+  }
+
+  .fandom-list {
+    border-top: 1px solid rgba(70, 41, 24, 0.28);
+  }
+
+  .fandom-list article {
+    display: grid;
+    grid-template-columns: 54px 1fr auto;
+    gap: 24px;
+    align-items: center;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba(70, 41, 24, 0.28);
+  }
+
+  .number {
+    color: #9d6a34;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+  }
+
+  h3 {
+    margin: 0 0 7px;
+    color: #3a2416;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+
+  .fandom-list p {
+    max-width: 480px;
+    margin: 0;
+    color: #654c3a;
+    font-family: Bellevue, "Avenir Next", Georgia, serif;
+    line-height: 1.55;
+  }
+
+  .arrow {
+    color: #8b5e2b;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .fandoms {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .fandoms {
+      width: min(100% - 28px, 1180px);
+      padding: 80px 0;
+    }
+
+    .fandom-list article {
+      grid-template-columns: 38px 1fr;
+      gap: 14px;
+    }
+
+    .arrow {
+      display: none;
+    }
+  }
+</style>
